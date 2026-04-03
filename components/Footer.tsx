@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const navLinks = [
     { label: "Home", href: "#hero" },
@@ -16,13 +18,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <div>
-              <h2 className="font-oswald font-700 text-cdl-yellow text-3xl uppercase leading-tight">
-                TROY CDL
-              </h2>
-              <h3 className="font-oswald font-700 text-white text-2xl uppercase leading-tight">
-                SCHOOL
-              </h3>
+            <div className="flex items-center gap-4">
+              <div className="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 shadow-[0_0_30px_rgba(255,209,0,0.2)]">
+                <Image
+                  src="/images/logo.png"
+                  alt="Troy CDL Training Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="font-oswald font-700 text-cdl-yellow text-3xl uppercase leading-tight">
+                  TROY CDL
+                </h2>
+                <h3 className="font-oswald font-700 text-white text-2xl uppercase leading-tight">
+                  SCHOOL
+                </h3>
+              </div>
             </div>
             <p className="font-inter text-white/50 text-sm leading-relaxed max-w-xs">
               Professional CDL training in Dayton, Ohio. Helping students earn their

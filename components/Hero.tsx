@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -225,15 +226,27 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 pt-20">
-        {/* Badge */}
+        {/* Logo + Badge */}
         <div
           ref={subRef}
-          className="mb-6 flex items-center gap-3 flex-wrap justify-center"
+          className="mb-6 flex flex-col items-center gap-4"
         >
-          <span className="badge">School Registration #2345</span>
-          <span className="inline-flex items-center gap-2 bg-white/10 text-white/80 font-inter text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-white/20">
-            Dayton, Ohio
-          </span>
+          {/* Logo mark */}
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(255,209,0,0.35),0_0_80px_rgba(255,209,0,0.15)] hover:shadow-[0_0_60px_rgba(255,209,0,0.5)] transition-shadow duration-300">
+            <Image
+              src="/images/logo.png"
+              alt="Troy CDL Training"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <span className="badge">School Registration #2345</span>
+            <span className="inline-flex items-center gap-2 bg-white/10 text-white/80 font-inter text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-white/20">
+              Dayton, Ohio
+            </span>
+          </div>
         </div>
 
         {/* Headline */}

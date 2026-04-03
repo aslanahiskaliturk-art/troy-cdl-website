@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import BenefitsSection from "@/components/BenefitsSection";
 import CareerStrip from "@/components/CareerStrip";
 import TruckDivider from "@/components/TruckDivider";
+import CredentialsSection from "@/components/CredentialsSection";
 import OhioRequirementsSection from "@/components/OhioRequirementsSection";
 import GrantsSection from "@/components/GrantsSection";
 import TrainingSection from "@/components/TrainingSection";
@@ -20,13 +21,15 @@ export default function Home() {
         <Hero />
         <BenefitsSection />
         <CareerStrip />
-        <TruckDivider direction="ltr" label="How to Get Your Ohio CDL" />
+        <TruckDivider direction="ltr" label="State Licensed &amp; Authorized" />
+        <CredentialsSection />
+        <TruckDivider direction="rtl" label="How to Get Your Ohio CDL" />
         <OhioRequirementsSection />
-        <TruckDivider direction="rtl" label="Grants &amp; Tuition Assistance" />
+        <TruckDivider direction="ltr" label="Grants &amp; Tuition Assistance" />
         <GrantsSection />
-        <TruckDivider direction="ltr" label="Class A &amp; B CDL License Training" />
+        <TruckDivider direction="rtl" label="Class A &amp; B CDL License Training" />
         <TrainingSection />
-        <TruckDivider direction="rtl" label="Hear From Our Graduates" />
+        <TruckDivider direction="ltr" label="Hear From Our Graduates" />
         <ReviewsSection />
         <CTASection />
         <Footer />

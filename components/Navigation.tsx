@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,8 +49,18 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-3 group">
+            {/* Real logo image */}
+            <div className="relative flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden shadow-[0_0_20px_rgba(255,209,0,0.25)] group-hover:shadow-[0_0_30px_rgba(255,209,0,0.4)] transition-shadow duration-300">
+              <Image
+                src="/images/logo.png"
+                alt="Troy CDL Training Logo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
             <div className="flex flex-col leading-none">
-              <span className="font-oswald font-700 text-cdl-yellow text-xl md:text-2xl uppercase leading-tight tracking-tight">
+              <span className="font-oswald font-700 text-cdl-yellow text-xl md:text-2xl uppercase leading-tight tracking-tight group-hover:text-cdl-yellow transition-colors">
                 TROY CDL
               </span>
               <span className="font-oswald font-700 text-white text-base md:text-lg uppercase leading-tight tracking-tight">
