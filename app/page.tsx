@@ -7,6 +7,7 @@ import CredentialsSection from "@/components/CredentialsSection";
 import OhioRequirementsSection from "@/components/OhioRequirementsSection";
 import GrantsSection from "@/components/GrantsSection";
 import TrainingSection from "@/components/TrainingSection";
+import GallerySection from "@/components/GallerySection";
 import ReviewsSection from "@/components/ReviewsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -29,7 +30,9 @@ export default function Home() {
         <GrantsSection />
         <TruckDivider direction="rtl" label="Class A &amp; B CDL License Training" />
         <TrainingSection />
-        <TruckDivider direction="ltr" label="Hear From Our Graduates" />
+        <TruckDivider direction="ltr" label="See Us In Action" />
+        <GallerySection />
+        <TruckDivider direction="rtl" label="Hear From Our Graduates" />
         <ReviewsSection />
         <CTASection />
         <Footer />

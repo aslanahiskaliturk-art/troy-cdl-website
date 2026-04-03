@@ -20,8 +20,8 @@ const certs = [
     details: [
       { label: "License #", value: "4326-2950" },
       { label: "Type", value: "CDL A Training School" },
-      { label: "Valid Through", value: "Dec 31, 2025" },
       { label: "Signed By", value: "Ohio Dept. of Public Safety" },
+      { label: "Authority", value: "ORC Chapter 4508.03" },
     ],
     badgeColor: "from-blue-900 to-blue-800",
     accentColor: "#3B82F6",
@@ -37,8 +37,8 @@ const certs = [
     details: [
       { label: "Entity", value: "Troy CDL Testing LLC" },
       { label: "Site #", value: "57ND" },
-      { label: "Valid Until", value: "May 19, 2027" },
       { label: "Authority", value: "BMV · OAC Chapter 4501-47" },
+      { label: "Issued By", value: "Ohio Dept. of Public Safety" },
     ],
     badgeColor: "from-cdl-red to-red-900",
     accentColor: "#C41230",
@@ -175,9 +175,9 @@ export default function CredentialsSection() {
                     src={cert.src}
                     alt={cert.alt}
                     width={700}
-                    height={540}
+                    height={900}
                     className="w-full h-auto object-contain"
-                    style={{ maxHeight: "320px", objectFit: "contain", background: "#fff" }}
+                    style={{ maxHeight: "340px", objectFit: "contain", background: "#fff" }}
                   />
 
                   {/* Verified overlay badge */}
@@ -221,7 +221,7 @@ export default function CredentialsSection() {
             { icon: "🏛️", text: "Ohio Dept. of Public Safety", sub: "Licensed School" },
             { icon: "🚛", text: "CDL A Training School", sub: "License #4326-2950" },
             { icon: "✅", text: "Authorized Testing Site", sub: "Site #57ND" },
-            { icon: "📅", text: "Valid Through 2027", sub: "Fully Current" },
+            { icon: "📋", text: "OAC Chapter 4501-47", sub: "Fully Compliant" },
           ].map((b, i) => (
             <div
               key={i}
