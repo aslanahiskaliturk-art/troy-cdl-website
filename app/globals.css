@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cdl-yellow: #FFD100;
+  --cdl-red: #C41230;
+  --cdl-black: #0A0A0A;
+  --cdl-paper: #F5F0E8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #F5F0E8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFD100;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C41230;
+}
+
+/* Road stripe divider */
+.road-stripe {
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD100 0px,
+    #FFD100 60px,
+    transparent 60px,
+    transparent 120px
+  );
+}
+
+/* Diagonal stripe background */
+.stripe-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 209, 0, 0.04) 20px,
+    rgba(255, 209, 0, 0.04) 40px
+  );
+}
+
+/* Hard shadow utility */
+.hard-shadow {
+  filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.8));
+}
+
+/* Text outline */
+.text-outline-yellow {
+  -webkit-text-stroke: 3px #FFD100;
+  color: transparent;
+}
+.text-outline-black {
+  -webkit-text-stroke: 2px #0A0A0A;
+  color: transparent;
+}
+
+/* Badge style */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #C41230;
+  color: #FFD100;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* Pill button */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #C41230;
+  color: #FFD100;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 40px;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pill-btn:hover {
+  background: #A00E27;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 18, 48, 0.5);
+}
+
+/* Section separator - asphalt road */
+.asphalt-divider {
+  height: 16px;
+  background: linear-gradient(180deg, #2A2A2A 0%, #1A1A1A 50%, #2A2A2A 100%);
+  position: relative;
+  overflow: hidden;
+}
+.asphalt-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD100 0px,
+    #FFD100 50px,
+    transparent 50px,
+    transparent 100px
+  );
+}
+
+/* Star rating */
+.star-filled {
+  color: #FFD100;
+}
+.star-empty {
+  color: #444;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 209, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+/* Reveal animation classes (used by GSAP) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
