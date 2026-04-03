@@ -25,7 +25,7 @@ export default function CareerStrip() {
         stagger: 0.1,
         duration: 0.7,
         ease: "power3.out",
-        scrollTrigger: { trigger: ref.current, start: "top 85%" },
+        scrollTrigger: { trigger: ref.current, start: "top 90%", once: true },
       });
     },
     { scope: ref }

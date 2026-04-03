@@ -74,7 +74,8 @@ export default function BenefitsSection() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
+          start: "top 85%",
+          once: true,
         },
       });
 
@@ -87,7 +88,8 @@ export default function BenefitsSection() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".benefits-grid",
-          start: "top 80%",
+          start: "top 90%",
+          once: true,
         },
       });
     },

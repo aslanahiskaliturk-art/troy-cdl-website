@@ -85,7 +85,7 @@ export default function TrainingSection() {
         opacity: 0,
         duration: 0.9,
         ease: "power3.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 90%", once: true },
       });
 
       gsap.from(".class-card", {
@@ -94,7 +94,7 @@ export default function TrainingSection() {
         stagger: 0.2,
         duration: 0.8,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".class-cards", start: "top 80%" },
+        scrollTrigger: { trigger: ".class-cards", start: "top 90%", once: true },
       });
 
       gsap.from(".curriculum-item", {
@@ -103,7 +103,7 @@ export default function TrainingSection() {
         stagger: 0.1,
         duration: 0.6,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".curriculum-list", start: "top 80%" },
+        scrollTrigger: { trigger: ".curriculum-list", start: "top 90%", once: true },
       });
 
       gsap.from(".instructor-card", {
@@ -112,7 +112,7 @@ export default function TrainingSection() {
         stagger: 0.12,
         duration: 0.7,
         ease: "back.out(1.4)",
-        scrollTrigger: { trigger: ".instructors-grid", start: "top 80%" },
+        scrollTrigger: { trigger: ".instructors-grid", start: "top 90%", once: true },
       });
     },
     { scope: sectionRef }

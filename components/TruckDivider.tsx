@@ -104,7 +104,8 @@ export default function TruckDivider({ direction = "ltr", label }: TruckDividerP
         duration: 0.8,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 85%",
+          start: "top 95%",
+          once: true,
         },
       });
     },

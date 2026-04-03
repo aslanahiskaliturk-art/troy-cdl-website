@@ -128,7 +128,7 @@ export default function OhioRequirementsSection() {
         opacity: 0,
         duration: 0.9,
         ease: "power3.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 90%", once: true },
       });
       gsap.from(".req-card", {
         y: 40,
@@ -136,7 +136,7 @@ export default function OhioRequirementsSection() {
         stagger: 0.08,
         duration: 0.6,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".req-grid", start: "top 80%" },
+        scrollTrigger: { trigger: ".req-grid", start: "top 90%", once: true },
       });
       gsap.from(".step-card", {
         x: -40,
@@ -144,7 +144,7 @@ export default function OhioRequirementsSection() {
         stagger: 0.1,
         duration: 0.65,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".steps-grid", start: "top 80%" },
+        scrollTrigger: { trigger: ".steps-grid", start: "top 90%", once: true },
       });
       gsap.from(".endorsement-chip", {
         scale: 0.8,
@@ -152,7 +152,7 @@ export default function OhioRequirementsSection() {
         stagger: 0.07,
         duration: 0.5,
         ease: "back.out(1.4)",
-        scrollTrigger: { trigger: ".endorsements-row", start: "top 85%" },
+        scrollTrigger: { trigger: ".endorsements-row", start: "top 95%", once: true },
       });
     },
     { scope: sectionRef }

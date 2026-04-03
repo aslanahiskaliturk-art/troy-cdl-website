@@ -18,7 +18,7 @@ export default function CTASection() {
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 85%", once: true },
       });
 
       // Phone number pulsing scale on scroll trigger
@@ -27,7 +27,7 @@ export default function CTASection() {
         opacity: 0,
         duration: 0.8,
         ease: "back.out(1.7)",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 85%", once: true },
       });
     },
     { scope: sectionRef }

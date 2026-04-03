@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
+import GsapInit from "@/components/GsapInit";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -44,7 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <GsapInit />
+        {children}
+      </body>
     </html>
   );
 }

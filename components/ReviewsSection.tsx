@@ -127,7 +127,7 @@ export default function ReviewsSection() {
         opacity: 0,
         duration: 0.9,
         ease: "power3.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 75%" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 90%", once: true },
       });
 
       gsap.from(".review-card", {
@@ -136,7 +136,7 @@ export default function ReviewsSection() {
         stagger: 0.1,
         duration: 0.7,
         ease: "power3.out",
-        scrollTrigger: { trigger: ".reviews-grid", start: "top 80%" },
+        scrollTrigger: { trigger: ".reviews-grid", start: "top 90%", once: true },
       });
 
       gsap.from(".ig-card", {
@@ -145,7 +145,7 @@ export default function ReviewsSection() {
         stagger: 0.12,
         duration: 0.6,
         ease: "back.out(1.4)",
-        scrollTrigger: { trigger: ".ig-grid", start: "top 80%" },
+        scrollTrigger: { trigger: ".ig-grid", start: "top 90%", once: true },
       });
 
       // Continuous marquee for stat bar

@@ -42,7 +42,8 @@ export default function GrantsSection() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
+          start: "top 90%",
+          once: true,
         },
       });
 
@@ -53,7 +54,8 @@ export default function GrantsSection() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 70%",
+          start: "top 90%",
+          once: true,
         },
       });
 
@@ -65,7 +67,8 @@ export default function GrantsSection() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".steps-list",
-          start: "top 80%",
+          start: "top 90%",
+          once: true,
         },
       });
 
@@ -79,7 +82,8 @@ export default function GrantsSection() {
           snap: { textContent: 100 },
           scrollTrigger: {
             trigger: priceEl,
-            start: "top 85%",
+            start: "top 95%",
+            once: true,
           },
           onUpdate() {
             const el = priceEl as HTMLElement;
