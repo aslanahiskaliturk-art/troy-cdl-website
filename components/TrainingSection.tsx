@@ -50,28 +50,22 @@ const curriculum = [
 
 const instructors = [
   {
-    name: "Instructor A",
-    exp: "15+ Years",
-    spec: "Class A Long-Haul",
-    initials: "JR",
+    name: "Amber Rice",
+    exp: "State Certified",
+    spec: "Ohio CDL Certified Instructor",
+    initials: "AR",
   },
   {
-    name: "Instructor B",
-    exp: "12+ Years",
-    spec: "Class A & B, Tanker",
-    initials: "MT",
+    name: "Zeynali Urishanov",
+    exp: "State Certified",
+    spec: "Ohio CDL Certified Instructor",
+    initials: "ZU",
   },
   {
-    name: "Instructor C",
-    exp: "10+ Years",
-    spec: "Class B, Transit",
-    initials: "SD",
-  },
-  {
-    name: "Instructor D",
-    exp: "8+ Years",
-    spec: "Class A, Flatbed",
-    initials: "KL",
+    name: "Jonah Davis",
+    exp: "State Certified",
+    spec: "Ohio CDL Certified Instructor",
+    initials: "JD",
   },
 ];
 
@@ -265,28 +259,26 @@ export default function TrainingSection() {
             <h3 className="font-oswald font-700 text-cdl-black text-2xl md:text-3xl uppercase mb-8">
               Our Instructors
             </h3>
-            <div className="instructors-grid grid grid-cols-2 gap-4">
+            <div className="instructors-grid grid grid-cols-3 gap-4">
               {instructors.map((inst, i) => (
                 <div
                   key={i}
                   className="instructor-card bg-cdl-black rounded-xl p-5 flex flex-col items-center text-center gap-3 hover:-translate-y-1 transition-transform duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.15)]"
                 >
                   {/* Avatar */}
-                  <div className="w-14 h-14 rounded-full bg-cdl-yellow flex items-center justify-center">
-                    <span className="font-oswald font-700 text-cdl-black text-xl">
+                  <div className="w-12 h-12 rounded-full bg-cdl-yellow flex items-center justify-center flex-shrink-0">
+                    <span className="font-oswald font-700 text-cdl-black text-lg">
                       {inst.initials}
                     </span>
                   </div>
                   <div>
-                    <p className="font-oswald font-700 text-white uppercase text-base leading-tight">
+                    <p className="font-oswald font-700 text-white uppercase text-sm leading-tight">
                       {inst.name}
                     </p>
-                    <p className="font-inter text-cdl-yellow text-xs mt-1">
-                      {inst.exp} Experience
-                    </p>
-                    <p className="font-inter text-white/40 text-xs mt-0.5">
-                      {inst.spec}
-                    </p>
+                    <span className="inline-flex items-center gap-1 bg-cdl-yellow/15 text-cdl-yellow font-inter text-[10px] uppercase tracking-wide px-2 py-0.5 rounded mt-1">
+                      <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                      State Certified
+                    </span>
                   </div>
                 </div>
               ))}
@@ -312,7 +304,7 @@ export default function TrainingSection() {
               <div className="grid grid-cols-3 gap-3 text-center">
                 {[
                   { val: "10+", label: "Trucks" },
-                  { val: "4+", label: "Instructors" },
+                  { val: "3", label: "Instructors" },
                   { val: "100%", label: "Pass Rate Goal" },
                 ].map((s) => (
                   <div key={s.label} className="bg-white/5 rounded-lg py-3">
