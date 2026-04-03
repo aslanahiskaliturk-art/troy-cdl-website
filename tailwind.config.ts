@@ -23,6 +23,14 @@ const config: Config = {
         oswald: ["var(--font-oswald)", "Impact", "Arial Narrow", "sans-serif"],
         inter: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
+      fontWeight: {
+        "400": "400",
+        "500": "500",
+        "600": "600",
+        "700": "700",
+        "800": "800",
+        "900": "900",
+      },
       animation: {
         "truck-drive": "truckDrive 4s linear infinite",
         pulse2: "pulse2 2s ease-in-out infinite",
