@@ -186,7 +186,7 @@ export default function Hero() {
       className="relative min-h-screen bg-cdl-black overflow-hidden"
       style={{ height: "100svh" }}
     >
-      {/* Video background */}
+      {/* Video background (loads if available) */}
       <video
         ref={videoRef}
         src="/truck-drive.mp4"
@@ -196,14 +196,26 @@ export default function Hero() {
         loop
         className="absolute inset-0 w-full h-full object-cover opacity-40"
         aria-hidden="true"
+        style={{ display: 'block' }}
+      />
+
+      {/* Hero background — visible when no video */}
+      <div className="absolute inset-0 hero-bg pointer-events-none" />
+
+      {/* Radial glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(196,18,48,0.18) 0%, transparent 70%)",
+        }}
       />
 
       {/* Gradient overlays */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-br from-cdl-black/90 via-cdl-black/60 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-br from-cdl-black/80 via-cdl-black/50 to-transparent pointer-events-none"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-cdl-black via-transparent to-cdl-black/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-cdl-black via-transparent to-cdl-black/50 pointer-events-none" />
 
       {/* Diagonal stripe accent */}
       <div className="absolute inset-0 stripe-bg pointer-events-none opacity-50" />
@@ -227,10 +239,12 @@ export default function Hero() {
         {/* Headline */}
         <div ref={headlineRef}>
           <h1 className="font-oswald font-700 leading-none uppercase">
-            <span className="block text-white text-[clamp(4rem,14vw,9rem)] drop-shadow-[4px_4px_0_rgba(0,0,0,0.8)]">
+            <span className="block text-white text-[clamp(4rem,14vw,9rem)] drop-shadow-[4px_4px_0_rgba(0,0,0,0.9)]"
+              style={{ textShadow: "4px 4px 0 rgba(0,0,0,0.9), 0 0 60px rgba(255,255,255,0.08)" }}>
               TROY CDL
             </span>
-            <span className="block text-cdl-yellow text-[clamp(4rem,14vw,9rem)] drop-shadow-[4px_4px_0_rgba(0,0,0,0.8)]">
+            <span className="shimmer-text block text-[clamp(4rem,14vw,9rem)]"
+              style={{ filter: "drop-shadow(4px 4px 0 rgba(0,0,0,0.8)) drop-shadow(0 0 40px rgba(255,209,0,0.4))" }}>
               SCHOOL
             </span>
           </h1>

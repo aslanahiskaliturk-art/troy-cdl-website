@@ -1,10 +1,11 @@
 import type { Config } from "tailwindcss";
+import path from "path";
 
 const config: Config = {
   content: [
-    "C:/Users/aslan/troy-cdl-school/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "C:/Users/aslan/troy-cdl-school/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "C:/Users/aslan/troy-cdl-school/app/**/*.{js,ts,jsx,tsx,mdx}",
+    path.resolve(__dirname, "./pages/**/*.{js,ts,jsx,tsx,mdx}"),
+    path.resolve(__dirname, "./components/**/*.{js,ts,jsx,tsx,mdx}"),
+    path.resolve(__dirname, "./app/**/*.{js,ts,jsx,tsx,mdx}"),
   ],
   theme: {
     extend: {

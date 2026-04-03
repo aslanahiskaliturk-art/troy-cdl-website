@@ -156,7 +156,10 @@ export default function TrainingSection() {
           {classTypes.map((cls) => (
             <div
               key={cls.type}
-              className={`class-card relative rounded-2xl overflow-hidden bg-gradient-to-br ${cls.color} p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.2)]`}
+              className={`class-card relative rounded-2xl overflow-hidden bg-gradient-to-br ${cls.color} p-8 md:p-10`}
+              style={{
+                boxShadow: "0 20px 60px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1) inset",
+              }}
             >
               {/* Badge */}
               <span className="inline-block bg-cdl-black text-cdl-yellow font-oswald font-700 uppercase tracking-widest text-xs px-4 py-1.5 rounded mb-6">

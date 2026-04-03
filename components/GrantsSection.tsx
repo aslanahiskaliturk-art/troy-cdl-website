@@ -141,7 +141,9 @@ export default function GrantsSection() {
             </div>
 
             {/* Price card */}
-            <div className="grants-card bg-cdl-red rounded-2xl p-8 inline-block relative overflow-hidden">
+            <div className="grants-card bg-cdl-red rounded-2xl p-8 inline-block relative overflow-hidden"
+              style={{ boxShadow: "0 24px 64px rgba(196,18,48,0.5), 0 4px 12px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.08) inset" }}
+            >
               <div className="absolute inset-0 opacity-10"
                 style={{
                   backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",

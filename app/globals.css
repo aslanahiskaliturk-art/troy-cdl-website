@@ -152,10 +152,14 @@ body {
 
 /* Glass card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 209, 0, 0.15);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 12px;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.35),
+    0 1px 0 rgba(255,255,255,0.04) inset;
 }
 
 /* Reveal animation classes (used by GSAP) */
@@ -170,4 +174,93 @@ body {
 .reveal-right {
   opacity: 0;
   transform: translateX(50px);
+}
+
+/* ── Hero background (when no video is loaded) ──────────────────── */
+.hero-bg {
+  background:
+    /* Fine grid lines */
+    linear-gradient(rgba(255,209,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,209,0,0.04) 1px, transparent 1px),
+    /* Large diagonal stripes */
+    repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 40px,
+      rgba(196,18,48,0.06) 40px,
+      rgba(196,18,48,0.06) 41px
+    ),
+    /* Base color */
+    #0A0A0A;
+  background-size: 60px 60px, 60px 60px, 100% 100%, 100% 100%;
+}
+
+/* ── Depth card — adds 3-D shadow lift ──────────────────────────── */
+.depth-card {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.4),
+    0 8px 24px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(255,209,0,0.08) inset;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.depth-card:hover {
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.5),
+    0 20px 48px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(255,209,0,0.2) inset;
+  transform: translateY(-4px);
+}
+
+/* ── Neon glow on yellow text ───────────────────────────────────── */
+.glow-yellow {
+  text-shadow:
+    0 0 20px rgba(255,209,0,0.5),
+    0 0 60px rgba(255,209,0,0.25),
+    0 0 100px rgba(255,209,0,0.1);
+}
+
+/* ── Red spotlight glow ─────────────────────────────────────────── */
+.glow-red {
+  box-shadow:
+    0 0 40px rgba(196,18,48,0.5),
+    0 0 80px rgba(196,18,48,0.25);
+}
+
+/* ── Glassmorphism card (stronger) ─────────────────────────────── */
+.glass-card-strong {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,209,0,0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.03) inset;
+}
+
+/* ── Animated gradient border ───────────────────────────────────── */
+@keyframes borderRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Shimmer effect on stat numbers ────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #FFD100 0%,
+    #fff8c0 40%,
+    #FFD100 60%,
+    #E6BC00 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
 }

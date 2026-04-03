@@ -129,7 +129,10 @@ export default function BenefitsSection() {
           {benefits.map((b, i) => (
             <div
               key={i}
-              className="benefit-card group bg-cdl-black rounded-2xl p-8 flex flex-col items-start gap-5 hover:bg-cdl-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)] cursor-default"
+              className="benefit-card group bg-cdl-black rounded-2xl p-8 flex flex-col items-start gap-5 hover:bg-cdl-dark transition-all duration-300 hover:-translate-y-3 cursor-default"
+              style={{
+                boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,209,0,0.08) inset",
+              }}
             >
               {/* Highlight badge */}
               <span className="font-oswald font-700 text-cdl-yellow text-sm uppercase tracking-widest bg-cdl-red px-3 py-1 rounded">
